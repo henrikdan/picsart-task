@@ -5,8 +5,16 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
-    
-    
+
+    <dependency>
+         <groupId>io.rest-assured</groupId>
+         <artifactId>json-schema-validator</artifactId>
+         <version>4.4.0</version>
+         <scope>test</scope>
+    </dependency>
+  
+  
+
     <dependency>
 		 <groupId>io.rest-assured</groupId>
 		 <artifactId>rest-assured</artifactId>
@@ -46,11 +54,6 @@
          <version>1.7.25</version>
          <scope>test</scope>
     </dependency>
-
-
-          
-  
-
 
   </dependencies>
 </project>

@@ -1,7 +1,7 @@
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
@@ -124,9 +124,44 @@ public class Task {
 
 	}
 	
-	
-	
+	@Test(retryAnalyzer = Retry.class)
+	//hover on image
+	public void test7() {
+		logger.debug(null);
+		System.setProperty("webdriver.chrome.driver", "\\Users\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		 
+
+		driver.get("https://picsart.com/images");
+		
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div[1]/div[3]/div/div/div[1]/div[1]/div/a/span/img"));
+		
+		
+		Actions action = new Actions(driver);    
+		action.moveToElement((WebElement) driver).perform();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div[1]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/div/button[2]/i/svg")).click();       //like 
+		
+		logger.debug(null);
+		driver.close();
 
 
+	}
+	
+	@Test(retryAnalyzer = Retry.class)
+	//click on image
+	public void test8() {
+		logger.debug(null);
+		System.setProperty("webdriver.chrome.driver", "\\Users\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		 
+		driver.get("https://picsart.com/images");
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div[1]/div[3]/div/div/div[1]/div[1]/div/a/span/img"));
+		
+		logger.debug(null);
+		driver.close();
+
+
+	}
+	
 }
 

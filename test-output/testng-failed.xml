@@ -5,7 +5,8 @@
     <classes>
       <class name="Task">
         <methods>
-          <include name="test6"/>
+          <include name="test8"/>
+          <include name="test7"/>
         </methods>
       </class> <!-- Task -->
     </classes>
